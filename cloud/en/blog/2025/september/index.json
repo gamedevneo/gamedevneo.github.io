@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Welcome",
+        "description": "Welcome in my first post i have ever written on my website",
+        "keywords": [
+           "welcome",
+           "first post",
+           "my first post"
+        ],
+        "category": [
+            "blog"
+        ],
+        "subcategory": [
+            "my_story",
+            "my_post"
+        ],
+        "cover": {
+            "type": "image",
+            "src": "/src/images/default/welcome.jpg"
+        },
+        "path": "blog/2025/september/data/welcome.js"
+    }
+]

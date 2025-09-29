@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Mastering C++: The Power of Precision and Performance",
+    "description": "Explore the world of C++, a language that empowers you to write high-performance, system-level applications. Whether it's for game development, embedded systems, or optimizing software, C++ gives you complete control over memory and hardware. Dive into the heart of this powerful programming language and unlock its true potential.",
+    "keywords": [
+      "C++ programming",
+      "system programming",
+      "high performance",
+      "memory management",
+      "low-level programming"
+    ],
+    "category": [
+      "programming",
+      "software development"
+    ],
+    "subcategory": [
+      "C++ tutorials",
+      "advanced C++ techniques"
+    ],
+    "cover": {
+      "type": "image",
+      "src": "/assets/covers/cpp_programming.jpg"
+    },
+    "path": "story/2025/january/data/cpp_programming.js"
+  },
+  {
+    "title": "The Art of Game Development: From Concept to Reality",
+    "description": "Game development is a journey that transforms creative ideas into interactive experiences. Learn about the key aspects of game design, development, and optimization, from storyboarding and mechanics to gameplay and performance tuning. Whether you're a hobbyist or a professional, mastering game development opens up limitless possibilities.",
+    "keywords": [
+      "game development",
+      "game design",
+      "game engines",
+      "unity",
+      "unreal engine",
+      "indie games"
+    ],
+    "category": [
+      "technology",
+      "entertainment"
+    ],
+    "subcategory": [
+      "game mechanics",
+      "game optimization"
+    ],
+    "cover": {
+      "type": "image",
+      "src": "/assets/covers/game_development.jpg"
+    },
+    "path": "story/2025/february/data/game_development.js"
+  },
+  {
+    "title": "Linux: The Heart of Open Source and Freedom",
+    "description": "Linux is more than just an operating system; it's a philosophy that champions open-source software, transparency, and freedom. Discover the power and flexibility of Linux, whether you're configuring servers, developing software, or exploring the vast world of open-source projects. Join the Linux community and experience computing like never before.",
+    "keywords": [
+      "Linux",
+      "open source",
+      "Linux tutorials",
+      "command line",
+      "system administration",
+      "server management"
+    ],
+    "category": [
+      "technology",
+      "open source"
+    ],
+    "subcategory": [
+      "Linux distributions",
+      "Linux system setup"
+    ],
+    "cover": {
+      "type": "image",
+      "src": "/assets/covers/linux_community.jpg"
+    },
+    "path": "story/2025/march/data/linux_community.js"
+  }
+]
