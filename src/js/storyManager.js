@@ -31,22 +31,37 @@ export default class StoryManager {
     this.clear();
     const pageData = this.paginator.slice;
 
-    // Create post cards
     pageData.forEach(post => {
-      const card = document.createElement("div");
-      card.className = "post-card";
-      card.innerHTML = `
-      <div class="text-content">
-        <h2>${post.title}</h2>
-        <p>${post.description}</p>
-      </div>
-        <button class="read">Read More</button>
-      `;
-      card.querySelector(".read").onclick = () => this.renderStory(post.path);
+      const card = this.createPostCard(post);
       this.loader.appendChild(card);
     });
 
     this.renderPagination();
+  }
+
+  /**
+   * Create a post preview card for the list view
+   */
+  createPostCard(post) {
+    const card = document.createElement("div");
+    card.className = "post-card";
+
+    const title = document.createElement("h2");
+    title.textContent = post.title;
+
+    const description = document.createElement("p");
+    description.textContent = post.description;
+
+    const readMoreButton = document.createElement("button");
+    readMoreButton.className = "read";
+    readMoreButton.textContent = "Read More";
+    readMoreButton.onclick = () => this.renderStory(post.path);
+
+    card.appendChild(title);
+    card.appendChild(description);
+    card.appendChild(readMoreButton);
+
+    return card;
   }
 
   /**
@@ -62,7 +77,7 @@ export default class StoryManager {
     });
 
     const info = document.createElement("div");
-    info.className = "pagination-into";
+    info.className = "pagination-info";
     info.textContent = `${this.paginator.page} / ${this.paginator.totalPages}`;
 
     const nextBtn = this.createButton(
@@ -101,32 +116,59 @@ export default class StoryManager {
       return;
     }
 
-    // Render story content
-    Object.entries(data).forEach(([tag, content]) => {
-      const el =
-        tag === "script"
-          ? Object.assign(document.createElement("script"), { textContent: content })
-          : Object.assign(document.createElement(tag), { innerHTML: content });
+    const contentContainer = document.createElement("div");
+    contentContainer.className = "story-content";
 
-      this.loader.appendChild(el);
+    // Iterate over the array of data
+    data.forEach(item => {
+      const element = this.createElement(item);
+      contentContainer.appendChild(element);
     });
 
+    this.loader.appendChild(contentContainer);
     this.appendBackButton();
   }
 
   /**
-   * Display a "not found" message when story fails to load
+   * Create an HTML element based on the provided data
+   */
+  createElement(item) {
+    const element = document.createElement(item.el);
+    
+    if (Array.isArray(item.content)) {
+      item.content.forEach(subItem => {
+        const listItem = document.createElement("li");
+        listItem.textContent = subItem;
+        element.appendChild(listItem);
+      });
+    } else {
+      element.textContent = item.content;
+    }
+
+    if (item.props && item.props.length > 0) {
+      item.props.forEach(prop => {
+        Object.keys(prop).forEach(key => {
+          element.setAttribute(key, prop[key]);
+        });
+      });
+    }
+
+    return element;
+  }
+
+  /**
+   * Display a "not found" message when the story fails to load
    */
   renderNotFound() {
-    const card = document.createElement("div");
-    card.className = "post-card";
-    card.innerHTML = `
-    <div class="text-content">
-      <h2>Story Not Found</h2>
-      <p>Sorry, the requested story could not be loaded. It may have been removed or is unavailable.</p>
-    </div>
-      `;
-    this.loader.appendChild(card);
+    const notFoundCard = document.createElement("div");
+    notFoundCard.className = "post-card";
+    notFoundCard.innerHTML = `
+      <div class="text-content">
+        <h2>Story Not Found</h2>
+        <p>Sorry, the requested story could not be loaded. It may have been removed or is unavailable.</p>
+      </div>
+    `;
+    this.loader.appendChild(notFoundCard);
     this.appendBackButton();
   }
 
