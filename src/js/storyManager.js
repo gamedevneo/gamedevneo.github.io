@@ -12,7 +12,9 @@ export default class StoryManager {
    * Reset the paginator with new posts and render the first page
    */
   setData(posts) {
-    this.paginator.reset(posts);
+    // Reverse the posts to show the latest post first
+    const reversedPosts = posts.reverse();
+    this.paginator.reset(reversedPosts);
     this.renderList();
   }
 
