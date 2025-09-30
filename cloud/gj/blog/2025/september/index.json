@@ -1,0 +1,50 @@
+[
+    {
+        "title": "ગેમ ડેવલપર બનવાના મારાં અનુક્રમણિકા",
+        "description": "આ પોસ્ટમાં, હું ગેમ ડેવલપમેન્ટમાં રસ કેવી રીતે વધ્યો, હું જે પડકારોનો સામનો કર્યો અને આ પહેલીને સીખવા અને અનુસરવા માટેના પગલાઓ વિશે મારો અનુભવ શેર કરું છું.",
+        "keywords": [
+            "game development",
+            "my story",
+            "C++ programming",
+            "mobile gaming",
+            "learning game development"
+        ],
+        "category": [
+            "blog"
+        ],
+        "subcategory": [
+            "my_story",
+            "game_development"
+        ],
+        "path": "blog/2025/september/data/my_journey_to_game_development.js"
+    },
+    {
+        "title": "મારા વેબસાઇટ પર સ્વાગત છે",
+        "description": "આજે દશેરા છે, એક તહેવાર જે સત્યની વિજયને ઉજવે છે. મેં આ વેબસાઇટ બનાવતી વખતે મારા વિચારો અને લક્ષ્યોને શેર કરવા માટે વિચાર કર્યો. આ દિવસે, મેં પોતાને સુધારવા પર ધ્યાન કેન્દ્રિત કર્યું અને ગેમ ડેવલપર બનવાના મારા સ્વપ્નોને પૂરા કરવા માટે મન પર નિયંત્રણ રાખવાનો નક્કી કર્યો.",
+        "keywords": [
+            "Dussehra",
+            "Game Developer",
+            "Learning Journey",
+            "Self-Control",
+            "Positive Thinking",
+            "C++ Programming",
+            "OpenGL",
+            "SDL",
+            "Self-Improvement"
+        ],
+        "category": [
+            "blog"
+        ],
+        "subcategory": [
+            "my_story",
+            "game_development",
+            "self_improvement",
+            "dussehra"
+        ],
+        "cover": {
+            "type": "image",
+            "src": "/src/pic/wallpaper/dussehra.jpg"
+        },
+        "path": "blog/2025/september/data/welcome.js"
+    }
+]
