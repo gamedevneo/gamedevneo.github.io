@@ -140,7 +140,7 @@ export function injectStyles() {
       margin-bottom:10px;
     }
 
-      .post-card button.read,
+    .post-card button.read,
     .button-container button,
     .back {
       background: linear-gradient(135deg, #ff512f, #dd2476);
@@ -162,6 +162,14 @@ export function injectStyles() {
       transform: translateY(-2px);
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
     }
+
+   .post-cover {
+  width: 100%;
+  height: 200px;  /* Adjust this height as needed */
+  object-fit: cover;
+  object-position: center;
+}
+
 
     .button-container {
       display: flex;

@@ -16,10 +16,7 @@
             "my_story",
             "game_development"
         ],
-        "cover": {
-            "type": "image",
-            "src": "/src/images/default/game_developer_story.jpg"
-        },
+      
         "path": "blog/2025/september/data/my_journey_to_game_development.js"
     },
     {
@@ -47,7 +44,7 @@
         ],
         "cover": {
             "type": "image",
-            "src": "/src/images/default/welcome_dussehra.jpg"
+            "src": "/src/pic/wallpaper/dussehra.jpg"
         },
         "path": "blog/2025/september/data/welcome.js"
     }

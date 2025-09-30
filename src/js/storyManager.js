@@ -52,6 +52,23 @@ export default class StoryManager {
     const description = document.createElement("p");
     description.textContent = post.description;
 
+    // Check if the post has a cover image or video
+    if (post.cover && post.cover.src) {
+      const cover = document.createElement(post.cover.type === "video" ? "video" : "img");
+
+      cover.className = "post-cover";
+      cover.src = post.cover.src;
+
+      // For video, set it to autoplay or loop if needed
+      if (post.cover.type === "video") {
+        cover.setAttribute("autoplay", "true");
+        cover.setAttribute("loop", "true");
+        cover.setAttribute("muted", "true");
+      }
+
+      card.appendChild(cover);
+    }
+
     const readMoreButton = document.createElement("button");
     readMoreButton.className = "read";
     readMoreButton.textContent = "Read More";
@@ -63,6 +80,7 @@ export default class StoryManager {
 
     return card;
   }
+
 
   /**
    * Render pagination controls
@@ -134,7 +152,7 @@ export default class StoryManager {
    */
   createElement(item) {
     const element = document.createElement(item.el);
-    
+
     if (Array.isArray(item.content)) {
       item.content.forEach(subItem => {
         const listItem = document.createElement("li");

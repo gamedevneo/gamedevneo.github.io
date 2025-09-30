@@ -9,6 +9,13 @@ const data = [
         ]
     },
     {
+        el: "img",
+        props: [{
+            class: "post-cover",
+            src: "/src/pic/wallpaper/dussehra.jpg"
+        }]
+    },
+    {
         el: "p",
         content: "Hello, I’m Chauhan Pruthviraj, and I welcome you to my new website."
     },
