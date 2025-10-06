@@ -1,9 +1,15 @@
-import App from "./app.js";
+import ApplicationKernel from './app.js';
 
-const app = new App();
+/**
+ * The main entry point for the application.
+ * It waits for the DOM content to be fully loaded before initiating the
+ * primary application boot sequence.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    // Instantiate the core application controller (Kernel)
+    const kernel = new ApplicationKernel();
 
-try {
-    app.start();
-} catch (error) {
-    console.error("App failed to start:", error);
-}
+    // Start the application's primary loading sequence.
+    // This method handles state initialization, loading, and initial rendering.
+    kernel.initializeApplicationBootSequence();
+});
