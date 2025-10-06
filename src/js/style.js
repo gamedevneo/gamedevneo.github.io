@@ -380,7 +380,166 @@ export function injectStyles() {
         height: 180px;
       }
     }
+
+    /* --- Accessibility Enhancements --- */
+
+        /* --- New Animations --- */
+
+    /* Button Hover Glow Effect */
+    @keyframes buttonGlowEffect {
+      0% { box-shadow: 0 0 12px rgba(255, 105, 180, 0.7); }
+      50% { box-shadow: 0 0 24px rgba(255, 105, 180, 1); }
+      100% { box-shadow: 0 0 12px rgba(255, 105, 180, 0.7); }
+    }
+
+    /* Hover glow effect for read buttons */
+    .post-card button.read:hover,
+    .button-container button:hover {
+      animation: buttonGlowEffect 1.2s infinite alternate;
+    }
+
+    /* Scaling animation for images in cards */
+    @keyframes imageScaleUp {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+
+    .post-cover:hover {
+      animation: imageScaleUp 0.4s ease-in-out;
+    }
+
+    /* Pulse animation for navigation links */
+    @keyframes navLinkPulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
+    }
+
+    nav a {
+      animation: navLinkPulse 2s infinite;
+    }
+
+    /* Background Shift Animation for Dynamic Transitions */
+    @keyframes backgroundShift {
+      0% { background: radial-gradient(circle at 30% 30%, #151515, #000); }
+      100% { background: radial-gradient(circle at 50% 50%, #282828, #111); }
+    }
+
+    body {
+      animation: backgroundShift 3s ease-in-out infinite alternate;
+    }
+
+    /* Smooth fade-in effect for new sections */
+    @keyframes fadeInSection {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    article, .post-card {
+      animation: fadeInSection 1s ease-in-out forwards;
+    }
+
+    /* --- Navigation Menu Animation --- */
+    nav.open {
+      width: 260px;
+      transition: width 0.5s ease-in-out, box-shadow 0.3s ease;
+      box-shadow: 5px 0 15px rgba(0, 0, 0, 0.8);
+    }
+
+    nav.close {
+      width: 0;
+      box-shadow: none;
+    }
+
+    /* Hover effect for navigation items */
+    nav a {
+      color: #dcdcdc;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 12px 0;
+      letter-spacing: 0.8px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6a00;
+      transform: translateX(8px);
+    }
+
+    /* --- Article Text Fade-In Effect --- */
+    @keyframes articleTextFadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .post-card h2, .post-card p {
+      animation: articleTextFadeIn 0.6s ease-out forwards;
+    }
+
+    /* Subtle pulsing effect for active elements */
+    @keyframes pulseEffect {
+      0% { opacity: 1; }
+      50% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+
+    .active {
+      animation: pulseEffect 1.5s ease-in-out infinite;
+    }
+
+    /* --- Footer Animations --- */
+    @keyframes footerAppear {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      animation: footerAppear 0.6s ease-in-out forwards;
+    }
+
+    /* Responsive Navbar Animation */
+    @media (max-width: 768px) {
+      nav {
+        transition: all 0.3s ease-in-out;
+      }
+
+      nav.open {
+        width: 250px;
+      }
+
+      .menu-toggle {
+        transition: transform 0.4s ease;
+      }
+
+      .menu-toggle:hover {
+        transform: scale(1.15);
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav.open {
+        width: 220px;
+      }
+    }
+/* accessibility enhancements */
+
+    /* Focus styles for interactive elements */
+    a:focus, button:focus, select:focus {
+      outline: 3px solid #a011b3ff;
+      outline-offset: 2px;
+      box-shadow: 0 0 8px rgba(12, 12, 12, 0.7);
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+
+  /* --- End of Styles --- */    
   `;
-  document.head.appendChild(style);
+
+  document.querySelector(".article").appendChild(style);
 }
 
