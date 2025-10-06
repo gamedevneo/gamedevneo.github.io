@@ -8,7 +8,7 @@
 import { CONFIG } from "./config.js";
 import { AppState } from "./state.js";
 import DynamicContentPresenter from "./DynamicContentPresenter.js";
-
+import { injectStyles } from "./style.js";
 /**
  * The core application class, responsible for initialization and control flow.
  */
@@ -31,6 +31,7 @@ class ApplicationKernel {
 
     // Initialization sequence
     this.registerGlobalInteractionHandlers();
+    injectStyles();
   }
 
   /**
