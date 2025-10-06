@@ -1,7 +1,7 @@
 import { CONFIG } from "./config.js";
 import { AppState } from "./state.js";
 import StoryManager from "./storyManager.js";
-import { injectStyles } from "./style.js";
+// import { injectStyles } from "./style.js";
 
 class App {
   constructor() {
@@ -15,7 +15,7 @@ class App {
       CONFIG.perPage
     );
 
-    injectStyles();
+    // injectStyles();
     this.initEventListeners();
   }
 
