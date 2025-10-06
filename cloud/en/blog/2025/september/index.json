@@ -1,0 +1,51 @@
+[
+    {
+        "title": "My Journey to Becoming a Game Developer",
+        "description": "In this post, I share my story about how I developed an interest in game development, the challenges I faced, and the steps I’ve taken to learn and pursue this passion.",
+        "keywords": [
+            "game development",
+            "my story",
+            "C++ programming",
+            "mobile gaming",
+            "learning game development"
+        ],
+        "category": [
+            "blog"
+        ],
+        "subcategory": [
+            "my_story",
+            "game_development"
+        ],
+      
+        "path": "blog/2025/september/data/my_journey_to_game_development.js"
+    },
+    {
+        "title": "Welcome to my Website",
+        "description": "Today is Dussehra, a festival that celebrates the victory of good over evil. I created this website to share my thoughts and goals. On this day, I decided to focus on self-improvement and control my mind to achieve my dreams of becoming a Game Developer.",
+        "keywords": [
+            "Dussehra",
+            "Game Developer",
+            "Learning Journey",
+            "Self-Control",
+            "Positive Thinking",
+            "C++ Programming",
+            "OpenGL",
+            "SDL",
+            "Self-Improvement"
+        ],
+        "category": [
+            "blog"
+        ],
+        "subcategory": [
+            "my_story",
+            "game_development",
+            "self_improvement",
+            "dussehra"
+        ],
+        "cover": {
+            "type": "image",
+            "src": "/src/pic/wallpaper/dussehra.jpg"
+        },
+        "path": "blog/2025/september/data/welcome.js"
+    }
+]
